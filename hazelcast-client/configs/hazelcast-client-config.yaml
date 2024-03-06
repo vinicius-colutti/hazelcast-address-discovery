@@ -1,0 +1,13 @@
+hazelcast-client:
+  network:
+    cluster-members:
+      - localhost:5701
+  connection-strategy:
+    async-start: false
+    reconnect-mode: ON
+    connection-retry:
+      initial-backoff-millis: 1000
+      max-backoff-millis: 60000
+      multiplier: 2
+      cluster-connect-timeout-millis: 50000
+      jitter: 0.2    
